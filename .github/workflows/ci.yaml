@@ -27,7 +27,7 @@ jobs:
         uses: docker/metadata-action@v4
         id: meta
         with:
-          images: ${{ env.CONTAINER_REPOSITORY }}/${{ env.CONTAINER_IMAGE }}:${{ github.event.release.tag_name }}
+          images: ${{ env.CONTAINER_REPOSITORY }}/${{ env.CONTAINER_IMAGE }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
